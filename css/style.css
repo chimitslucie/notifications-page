@@ -1,27 +1,259 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+/* start basic */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
 
 :root {
-  
+    --red: #f65552;
+    --blue: #0a327b;
+    --white: #ffffff;
+    --snow: #f7fafd;
+    --light-grey-blue: #e5effa;
+    --very-light-grey-blue: #dde7ee;
+    --grey-blue: #939cad;
+    --dark-grey-blue: #5e6778;
+    --very-dark-grey-blue: #1c202b;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  img {
+}
+
+img {
     width: 100%;
     max-width: 100%;
-  }
-  
-  html,
-  body {
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-  }
+}
 
-  body {
+html,
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
     width: 100vw;
     height: 100vh;
-  }
+    background-color: var(--snow);
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+/* end basic */
+
+/* start composant */
+.container {
+    margin: 0 auto;
+    width: 730px;
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 30px 30px 15px 30px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.text-bold {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 500;
+}
+/* end composant */
+
+/* start topbar */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topbar__content {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    color: var(--very-dark-grey-blue);
+}
+
+.topbar__number {
+    width: 30px;
+    height: 25px;
+    background-color: var(--blue);
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.topbar-text {
+    color: var(--white);
+}
+
+.topbar__link {
+    color: var(--dark-grey-blue);
+}
+
+.topbar__link:hover {
+    color: var(--blue);
+}
+/* end topbar */
+
+/* start card */
+.card {
+    margin-top: 30px;
+}
+
+.card__content {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.card__content:first-child,
+.card__content:nth-child(2),
+.card__content:nth-child(3) {
+    background-color: var(--snow);
+}
+
+.active {
+    background-color: var(--white) !important;
+}
+
+.card__content + .card__content {
+    margin-top: 10px;
+}
+
+.card__img {
+    width: 45px;
+    margin-right: 20px;
+}
+
+.content__text {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content__name {
+    margin-right: 5px;
+    color: var(--very-dark-grey-blue);
+}
+
+.content__name:hover {
+    color: var(--blue);
+}
+
+.text {
+    margin-right: 5px;
+    color: var(--dark-grey-blue);
+}
+
+.content__message {
+    color: var(--dark-grey-blue);
+}
+
+.content__message:hover {
+    color: var(--blue);
+}
+
+.icon {
+    margin-left: 5px;
+    font-size: 8px;
+    color: var(--red);
+    display: block !important;
+}
+
+.close {
+    display: none !important;
+}
+
+.time {
+    color: var(--grey-blue);
+}
+
+.card-kim {
+    display: flex;
+}
+
+.card-kim .content {
+    margin-right: 175px;
+}
+
+.img-chess {
+    width: 45px;
+}
+
+.message {
+    width: 565px;
+    border: 1px solid var(--very-light-grey-blue);
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-left: 85px;
+    margin-bottom: 10px;
+    display: block;
+    color: var(--dark-grey-blue);
+}
+
+.message:hover {
+    background-color: var(--light-grey-blue);
+}
+/* end card */
+
+/* start responsive */
+@media (max-width: 375px) {
+    .container {
+        width: 345px;
+        padding: 25px 15px 30px 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .text-bold {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .card {
+        margin-top: 25px;
+    }
+
+    .card__content {
+        padding: 15px 15px;
+    }
+
+    .card__img {
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .message {
+        width: 260px;
+        margin-left: 70px;
+    }
+
+    .card-kim .content {
+        margin-right: 0;
+    }
+
+    .card-kim .card__img {
+        height: 40px;
+    }
+
+    .img-chess {
+        width: 40px;
+    }
+}
